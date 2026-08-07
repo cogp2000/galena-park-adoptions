@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0b5d56">
+  <meta name="description" content="Meet adoptable dogs at the City of Galena Park Kennel.">
+  <title>Galena Park Kennel | Adopt a Dog</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#dogs">Skip to adoptable dogs</a>
+  <header class="site-header" id="top">
+    <div class="shell nav-wrap">
+      <a class="brand" href="#top" aria-label="Galena Park Kennel home">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M14 21c-4.3 0-7.5-3.5-7.5-7.8S9.2 6 13 6s6.6 3.6 6.6 8-1.4 7-5.6 7Zm20 0c-4.2 0-5.6-2.6-5.6-7S31.2 6 35 6s6.5 2.9 6.5 7.2S38.3 21 34 21ZM10.4 34.5c-3.4 0-6.4-2.7-6.4-6.2 0-3.2 2.2-5.7 5.2-5.7 3.5 0 6.6 3.5 6.6 7.1 0 3-2.2 4.8-5.4 4.8Zm27.2 0c-3.2 0-5.4-1.8-5.4-4.8 0-3.6 3.1-7.1 6.6-7.1 3 0 5.2 2.5 5.2 5.7 0 3.5-3 6.2-6.4 6.2ZM24 42c-7.3 0-12.6-3.4-12.6-8.4 0-4.2 3.7-7.1 6.7-10.3C20.1 21.2 21 19 24 19s3.9 2.2 5.9 4.3c3 3.2 6.7 6.1 6.7 10.3C36.6 38.6 31.3 42 24 42Z"/></svg></span>
+        <span><strong>Galena Park Kennel</strong><small>City of Galena Park, Texas</small></span>
+      </a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span><span class="sr-only">Open menu</span></button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="#dogs">Meet the dogs</a><a href="#how-it-works">How adoption works</a><a href="#visit">Visit</a><a href="#contact">Contact</a><a class="nav-cta" href="#dogs">Find your dog</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-orb hero-orb-one"></div><div class="hero-orb hero-orb-two"></div>
+      <div class="shell hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span></span> City of Galena Park Kennel</p>
+          <h1>Your new best friend might be waiting right here.</h1>
+          <p class="hero-lede">Meet the dogs currently looking for safe, loving homes. Browse their profiles, save your favorites, and contact the kennel to schedule a meet-and-greet.</p>
+          <div class="hero-actions"><a class="button button-primary" href="#dogs">Meet the dogs <span aria-hidden="true">→</span></a><a class="button button-ghost" href="#visit">Plan a visit</a></div>
+          <div class="hero-metrics"><div><strong id="featured-count">13</strong><span>dogs featured</span></div><div><strong>1-on-1</strong><span>meet-and-greets</span></div><div><strong>Local</strong><span>Galena Park care</span></div></div>
+        </div>
+        <div class="hero-visual reveal reveal-delay">
+          <div class="hero-photo-card"><img src="images/billie.webp" alt="Billie, an adoptable dog"><div class="photo-overlay"></div><div class="featured-label"><span>Featured friend</span><strong>Billie</strong></div><button class="round-button" data-open-dog="billie" type="button" aria-label="View Billie's profile">↗</button></div>
+          <div class="floating-card floating-card-one"><span class="status-dot"></span> Ready to meet</div><div class="floating-card floating-card-two"><strong>♥</strong> Save your favorites</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip"><div class="shell trust-grid"><div><span class="trust-icon">⌂</span><p><strong>Local care</strong><small>Dogs cared for by your city kennel</small></p></div><div><span class="trust-icon">♡</span><p><strong>Meet first</strong><small>Spend time together before deciding</small></p></div><div><span class="trust-icon">✓</span><p><strong>Clear next steps</strong><small>Simple, friendly adoption guidance</small></p></div></div></section>
+
+    <section class="dogs-section" id="dogs"><div class="shell">
+      <div class="section-heading reveal"><div><p class="eyebrow"><span></span> Available now</p><h2>Meet the dogs</h2></div><p>Every dog has a different story and personality. Search by name or use the filters to narrow the list.</p></div>
+      <div class="demo-note" role="note"><strong>Please note:</strong> Availability, health information, and temperament notes should be confirmed with kennel staff before adoption.</div>
+      <div class="filter-bar reveal" aria-label="Dog filters">
+        <label class="search-field"><span class="sr-only">Search dogs by name</span><svg viewBox="0 0 24 24"><path d="m21 21-4.35-4.35m2.1-5.4a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z"/></svg><input id="search-input" type="search" placeholder="Search by name" autocomplete="off"></label>
+        <div class="filter-pills" role="group" aria-label="Filter by trait"><button class="filter-pill is-active" type="button" data-filter="all">All dogs</button><button class="filter-pill" type="button" data-filter="dogs">Dog-friendly</button><button class="filter-pill" type="button" data-filter="calm">Calm</button><button class="filter-pill" type="button" data-filter="treatment">Sponsored treatment</button></div>
+        <label class="sort-field">Sort<select id="sort-select"><option value="featured">Featured</option><option value="name">Name A–Z</option><option value="age">Youngest first</option></select></label>
+      </div>
+      <div class="results-line"><span id="results-count">13 dogs</span><button id="clear-filters" type="button" hidden>Clear filters</button></div>
+      <div class="dog-grid" id="dog-grid" aria-live="polite"></div>
+      <div class="empty-state" id="empty-state" hidden><span>🐾</span><h3>No matching dogs</h3><p>Try a different name or remove a filter.</p></div>
+    </div></section>
+
+    <section class="feature-story"><div class="shell story-grid"><div class="story-image reveal"><img src="images/roxy.webp" alt="Roxy, an adoptable Belgian Malinois"><span class="story-badge">Made for second chances</span></div><div class="story-copy reveal reveal-delay"><p class="eyebrow eyebrow-light"><span></span> Why adopt locally</p><h2>A small decision can change two lives.</h2><p>Adopting through your local kennel gives a dog a fresh start and makes room for the next animal who needs care. The right match starts with a conversation and a little time together.</p><a class="text-link" href="#how-it-works">See how adoption works <span>→</span></a></div></div></section>
+
+    <section class="steps-section" id="how-it-works"><div class="shell"><div class="section-heading centered reveal"><div><p class="eyebrow"><span></span> Simple process</p><h2>From browsing to homecoming</h2></div><p>The kennel team can confirm current availability, answer questions, and guide you through the official city process.</p></div><div class="steps-grid"><article class="step-card reveal"><span class="step-number">01</span><div class="step-icon">⌕</div><h3>Browse profiles</h3><p>Explore the dogs and save the ones you would like to meet.</p></article><article class="step-card reveal reveal-delay"><span class="step-number">02</span><div class="step-icon">◷</div><h3>Schedule a visit</h3><p>Contact the kennel to confirm availability and arrange a meet-and-greet.</p></article><article class="step-card reveal reveal-delay-2"><span class="step-number">03</span><div class="step-icon">⌂</div><h3>Complete adoption</h3><p>Follow the city’s adoption requirements and prepare for the trip home.</p></article></div></div></section>
+
+    <section class="visit-section" id="visit"><div class="shell visit-card reveal"><div class="visit-copy"><p class="eyebrow eyebrow-light"><span></span> Come say hello</p><h2>Ready to meet someone?</h2><p>Contact the City of Galena Park Kennel before visiting to confirm hours, availability, and any documents or fees required.</p><div class="visit-actions"><a class="button button-white" href="tel:+17134530202">Call the kennel</a><a class="button button-outline-white" href="mailto:humane@cityofgalenapark-tx.gov?subject=Dog%20Adoption%20Inquiry">Email an inquiry</a></div></div><div class="visit-details"><div><span>Location</span><strong>City of Galena Park, Texas</strong><small>Call for current kennel location and visiting instructions.</small></div><div><span>Phone</span><strong>(713) 453-0202</strong><small>Call before visiting.</small></div><div><span>Hours</span><strong>Call before visiting</strong><small>Availability and access can change.</small></div></div></div></section>
+
+    <section class="contact-section" id="contact"><div class="shell contact-grid"><div class="contact-copy reveal"><p class="eyebrow"><span></span> Adoption inquiry</p><h2>Tell us who you would like to meet.</h2><p>Send the Humane Department your contact information and questions. A staff member can confirm current availability and explain the next steps.</p><div class="contact-direct"><span>Prefer email?</span><a href="mailto:humane@cityofgalenapark-tx.gov">humane@cityofgalenapark-tx.gov</a></div></div>
+      <form class="adoption-form reveal reveal-delay" name="adoption-inquiry" method="POST" action="/thank-you/" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="adoption-inquiry"><p class="honeypot"><label>Do not fill this out: <input name="bot-field"></label></p>
+        <div class="form-row"><label>Full name<input required type="text" name="name" autocomplete="name"></label><label>Email address<input required type="email" name="email" autocomplete="email"></label></div>
+        <div class="form-row"><label>Phone number<input type="tel" name="phone" autocomplete="tel"></label><label>Dog you are interested in<select id="contact-dog" name="dog"><option value="">Not sure yet</option><option>Billie</option><option>Bronco</option><option>Dexter</option><option>Dobbimon</option><option>Dorada</option><option>Duke</option><option>Gus</option><option>Lily</option><option>Max</option><option>Misty</option><option>Rosie</option><option>Roxy</option><option>Snowball</option></select></label></div>
+        <label>Message<textarea required name="message" rows="6" placeholder="Tell us what you would like to know or when you may be available to visit."></textarea></label>
+        <button class="button button-primary" type="submit">Send adoption inquiry <span aria-hidden="true">→</span></button><p class="form-note">Submitting this form sends an inquiry to the City’s Netlify Forms inbox. Availability is not guaranteed until confirmed by kennel staff.</p>
+      </form>
+    </div></section>
+  </main>
+
+  <footer class="site-footer"><div class="shell footer-grid"><div class="footer-brand"><a class="brand brand-footer" href="#top"><span class="brand-mark" aria-hidden="true">🐾</span><span><strong>Galena Park Kennel</strong><small>City of Galena Park, Texas</small></span></a><p>Helping local dogs find safe, loving homes.</p></div><div><h3>Explore</h3><a href="#dogs">Adoptable dogs</a><a href="#how-it-works">Adoption process</a><a href="#visit">Visit the kennel</a></div><div><h3>Contact</h3><a href="tel:+17134530202">(713) 453-0202</a><a href="mailto:humane@cityofgalenapark-tx.gov">Humane Department</a><a href="#contact">Adoption inquiry</a></div><div><h3>Share</h3><p>Share an adoptable dog and help their future family find them.</p><button class="footer-share" type="button" data-share-site>Share site</button></div></div><div class="shell footer-bottom"><span>© <span id="year"></span> City of Galena Park</span><span>Adoption details subject to kennel verification.</span></div></footer>
+
+  <dialog class="dog-dialog" id="dog-dialog"><button class="dialog-close" type="button" aria-label="Close profile">×</button><div id="dialog-content"></div></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
