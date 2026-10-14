@@ -1,33 +1,16 @@
-# Galena Park Kennel adoption site
+# Galena Park Kennel — easy editing version
 
-Updated deployment package: August 7, 2026.
+The front-end design is unchanged.
 
-## Deploy with GitHub + Netlify
+## Edit dogs only in `dogs.txt`
+Each dog is one line:
 
-1. **Replace the old repository contents with the contents of this ZIP.** In particular, overwrite any existing `netlify.toml`; the included file is valid TOML and intentionally minimal.
-2. Commit and push to the `main` branch.
-3. In Netlify, connect the repository (or keep the existing connected site).
-4. Build command: leave blank. Publish directory: `.` (repository root).
-5. Deploy. This is a static HTML/CSS/JavaScript site and needs no npm install or framework build.
+`name|image|age|sex|weight|breed|fixed|microchip|heartworm|status|traits|labels|card text|bio`
 
-## Adoption inquiry form
+Examples: `8 months`, `1 year`, `3 years`; microchip = `yes`/`no`; heartworm = `positive`/`negative`; status = `available`/`pending`; traits = `dog-friendly`, `calm`, `treatment`. Separate multiple traits or labels with commas.
 
-The form name is `adoption-inquiry` and uses Netlify Forms. After the first successful deploy, confirm that Netlify detects the form, then add an email notification for `humane@cityofgalenapark-tx.gov` in the site's Forms settings.
+To add a dog: upload its image to `images/`, add one line to `dogs.txt`, commit and push. The inquiry dropdown now updates automatically.
 
-## Important
+To remove a dog: delete its line from `dogs.txt`, commit and push.
 
-- The package contains all 13 kennel dogs from the supplied bio sheets.
-- Snowball is marked **Adoption pending**, carrying forward the latest project status.
-- Heartworm-positive profiles clearly say to ask about sponsored treatment.
-- Availability, health information, temperament, visiting hours, and adoption requirements should still be confirmed by kennel staff.
-
-## Netlify configuration
-
-`netlify.toml` contains only:
-
-```toml
-[build]
-publish = "."
-```
-
-This avoids the configuration parsing issue caused by malformed/unsupported configuration.
+Do not use the `|` character inside descriptions because it separates fields.
